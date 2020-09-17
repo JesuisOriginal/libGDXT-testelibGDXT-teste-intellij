@@ -9,6 +9,8 @@ import java.nio.ShortBuffer;
 
 public class Square {
 
+
+    // Commented due to and IntelliJ error which does not finds the GLES20 package
 //    private FloatBuffer vertexBuffer;
 //    private ShortBuffer drawListBuffer;
 //

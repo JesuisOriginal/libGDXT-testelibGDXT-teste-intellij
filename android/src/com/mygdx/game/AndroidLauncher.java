@@ -11,6 +11,8 @@ public class AndroidLauncher extends AndroidApplication {
 	protected void onCreate (Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
+		// initializes an Application, Adapter or listener, which contains the methods
+       // create, render, dispose, pause, resize and resume
 		initialize(new LiveWallpaperTest2(), config);
 	}
 }

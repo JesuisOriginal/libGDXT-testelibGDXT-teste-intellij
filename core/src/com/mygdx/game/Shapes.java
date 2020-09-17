@@ -5,6 +5,8 @@ import com.badlogic.gdx.graphics.VertexAttribute;
 import com.badlogic.gdx.graphics.VertexAttributes.Usage;
 
 public class Shapes {
+
+    // example code from the libGDX source
     public static Mesh genCube () {
         Mesh mesh = new Mesh(true, 24, 36, new VertexAttribute(Usage.Position, 3, "a_position"), new VertexAttribute(Usage.Normal,
                 3, "a_normal"), new VertexAttribute(Usage.TextureCoordinates, 2, "a_texcoords"));
