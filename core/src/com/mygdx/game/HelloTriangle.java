@@ -21,7 +21,12 @@ public class HelloTriangle extends GdxTest {
 
         shader = new ShaderProgram(vertexShader, fragmentShader);
         mesh = new Mesh(true, 3, 0, new VertexAttribute(Usage.Position, 3, "vPosition"));
-        float[] vertices = {0.0f, 0.5f, 0.0f, -0.5f, -0.5f, 0.0f, 0.5f, -0.5f, 0.0f};
+        float[] vertices = {
+//              <-x->  ↑y↓  ↗ z(depth) ↙
+                0.0f, 0.5f, 0.0f,
+                -0.5f, -0.5f, 0.0f,
+                0.5f, -0.5f, 0.0f
+        };
         mesh.setVertices(vertices);
     }
 
@@ -31,5 +36,10 @@ public class HelloTriangle extends GdxTest {
         Gdx.gl20.glClear(GL20.GL_COLOR_BUFFER_BIT);
         shader.bind();
         mesh.render(shader, GL20.GL_TRIANGLES);
+    }
+
+    @Override
+    public void dispose () {
+        mesh.dispose();
     }
 }

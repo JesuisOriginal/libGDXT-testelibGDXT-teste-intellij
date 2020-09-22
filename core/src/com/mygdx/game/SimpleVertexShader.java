@@ -45,11 +45,17 @@ public class SimpleVertexShader extends GdxTest {
 
     @Override
     public void render () {
+        // changes angle with time
         angle += Gdx.graphics.getDeltaTime() * 40.0f;
+        // still don't understand
         float aspect = Gdx.graphics.getWidth() / (float)Gdx.graphics.getHeight();
+        // sets the "camera view" of the object
         projection.setToProjection(1.0f, 20.0f, 60.0f, aspect);
+        // idt() => chains methods, trn, increments the coordinates,
         view.idt().trn(0, 0, -2.0f);
+        // change the matrix to a rotations matrix, of the specified angle
         model.setToRotation(axis, angle);
+
         combined.set(projection).mul(view).mul(model);
 
         Gdx.gl20.glViewport(0, 0, Gdx.graphics.getBackBufferWidth(), Gdx.graphics.getBackBufferHeight());

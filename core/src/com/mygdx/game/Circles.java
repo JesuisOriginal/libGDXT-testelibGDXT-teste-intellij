@@ -22,18 +22,9 @@ import java.nio.ShortBuffer;
  * https://libgdx.badlogicgames.com/ci/nightlies/docs/api/com/badlogic/gdx/graphics/glutils/ShapeRenderer.html#rect-float-float-float-float-
  * https://happycoding.io/tutorials/libgdx/graphics
  */
-public class Square extends GdxTest {
+public class Circles extends GdxTest {
 
     ShapeRenderer shapeRenderer;
-
-//    static float[] squareCoords = {
-////         0 <-x->  ↑y↓  ↗ z(depth) ↙
-//            -0.5f,  0.5f, 0.0f,   // top left
-//            -0.5f, -0.5f, 0.0f,   // bottom left
-//            0.5f, -0.5f, 0.0f,   // bottom right
-//            0.5f,  0.5f, 0.0f    // top right
-//    };
-
 
 
     @Override
@@ -63,7 +54,7 @@ public class Square extends GdxTest {
 
         shapeRenderer.begin(ShapeRenderer.ShapeType.Filled);
         shapeRenderer.setColor(0,1,1,1);
-        shapeRenderer.rect(200,400,100,100);
+        shapeRenderer.circle(1000, 1000, 400);
         shapeRenderer.end();
     }
 

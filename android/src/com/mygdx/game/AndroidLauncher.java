@@ -13,6 +13,9 @@ public class AndroidLauncher extends AndroidApplication {
 		AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
 		// initializes an Application, Adapter or listener, which contains the methods
        // create, render, dispose, pause, resize and resume
-		initialize(new LiveWallpaperTest2(), config);
+//		initialize(new HelloTriangle(), config);
+//		initialize(new SimpleVertexShader(), config);
+//		initialize(new LiveWallpaperTest2(), config);
+		initialize(new Square(), config);
 	}
 }

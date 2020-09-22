@@ -8,9 +8,9 @@ import com.badlogic.gdx.graphics.glutils.ShaderProgram;
 
 public class LiveWallpaperTest2 extends ApplicationAdapter {
 	SpriteBatch batch;
-	Texture img;
-	Texture shape;
-	Mesh cube;
+//	Texture img;
+//	Texture shape;
+//	Mesh cube;
 	Mesh mesh;
 	ShaderProgram shader;
 
@@ -43,7 +43,7 @@ public class LiveWallpaperTest2 extends ApplicationAdapter {
 	@Override
 	public void render () {
 		// opengl definitions
-		Gdx.gl.glClearColor(1, 0, 0, 1);
+		Gdx.gl.glClearColor(1, 1, 1, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		Gdx.gl20.glViewport(0, 0, Gdx.graphics.getBackBufferWidth(), Gdx.graphics.getBackBufferHeight());
 
@@ -60,6 +60,6 @@ public class LiveWallpaperTest2 extends ApplicationAdapter {
 	@Override
 	public void dispose () {
 		batch.dispose();
-		img.dispose();
+//		img.dispose();
 	}
 }
